@@ -8,7 +8,7 @@
             // 원래는 $(document).ready(function(){});
             $(function(){
                 $("#volText").text(51);
-                $("#volume").change(function(){
+                $("#volume").mousemove(function(){
                     let value = $("#volume").val();
                     $("#volText").text(value);
                 });
