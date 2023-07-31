@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>리스트 태그 사용하기</title>
+        <style>
+            #divbox{
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+            }
+            .divbox{
+                width: 200px;
+                height: 100px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        리스트- 순서가 없음/ 순서가 있음
+        <ul style="list-style-type: circle;">
+            <li>순서가 없는 태그</li>
+            <li>순서가 없는 태그</li>
+            <li>순서가 없는 태그</li>
+            <li>순서가 없는 태그</li>
+        </ul>
+        <ol style="list-style-type: upper-roman;" reversed>
+            <li>순서가 있다.</li>
+            <li>순서가 있다.</li>
+            <li>순서가 있다.</li>
+            <li>순서가 있다.</li>
+        </ol>
+
+        <hr>
+        <table border="1" style="width: 200px; height: 200px; text-align: center;color:darkblue ;background-color: rgb(221, 255, 127);">
+            <tr>
+                <td colspan="2">1</td>
+                
+                <td rowspan="2">3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">4</td>
+                <td>5</td>
+                
+            </tr>        
+            <tr>
+                
+                <td colspan="2">8</td>
+                
+            </tr>
+        </table>
+        테이블 아래입니다.
+        <div id="divbox">
+           <h1>div입니다.</h1>
+        </div>
+        <div class="divbox">
+            div입니다.
+        </div>
+        <div>
+            div입니다.
+        </div>
+        <div class="divbox">
+            스타일을 주고 싶지 않다.
+        </div>
+        <!-- 하나면 id, 여러개면 class -->
+        <hr>
+        <div style="float: right; width: 100px; height: 100px; background-color: red;">
+            div입니다.
+        </div>
+        <div style="float: left; width: 100px; height: 100px; background-color: blue;">
+            div입니다.
+        </div>
+        div밖입니다.
+        <a href="./semantic.html">시맨틱 태그</a>
+    </body>
+</html>
