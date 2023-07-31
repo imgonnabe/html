@@ -7,7 +7,12 @@
             // 여기는 스크립트 영역입니다.
             // 원래는 $(document).ready(function(){});
             $(function(){
-                alert("되나요?");
+                $("#volText").text(51);
+                $("#volume").change(function(){
+                    let value = $("#volume").val();
+                    $("#volText").text(value);
+                });
+                // alert("되나요?");
                 // 선택자 html, css, id, class / 명령
                 // $(선택자).명령();
                 $("h1").click(function(){
@@ -20,6 +25,11 @@
                     alert(pTag);
                     $("#p1").text("jQuery~~~~~");
                 });
+
+                $("button").click(function(){
+                    let number = $("input").val();
+                    alert(number);
+                });
             });
         </script>
     </head>
@@ -27,5 +37,7 @@
         <h1>jQuery 사용하기</h1>
         <p id="p1">제이쿼리에 대해 이해하고 사용할 수 있다.</p>
         <p class="p2">스스로 웹사이트를 제작하고 활용할 수 있다.</p>
+        <input id="volume" type="range" min="1" max="100"><span id="volText"></span>
+        <button>확인</button>
     </body>
 </html>
