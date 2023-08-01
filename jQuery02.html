@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-08-01</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        // $(document).ready(function(){});
+        // $(function(){});
+        $(function(){
+            // alert("!");
+            // $(선택자).명령();
+            $("button").click(function(){
+                let h = $("h1").text();
+                // alert(h);
+                $("#sp").text("<button>버튼</button>");
+                $(".sp2").html("<button>버튼</button>");
+            });
+            $("p").click(function(){
+                $("p").text("클릭했습니다");
+                $("p").css("color", "green");
+                $("p").css("background-color", "gray");
+                $("p").css("border", "2px solid red");
+                $("p").css("fontSize", "20pt");
+                $("button").remove();
+            });
+            $("#numBtn").click(function(){
+                let num = $("#num").val();
+                alert(num.length);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery를 우리 프로젝트에 넣어주기</h1>
+    <span id="sp"></span>
+    <span class="sp2"></span>
+    <p>문단1</p>
+    <p>문단2</p>
+    <p>여기를 클릭해주세요.</p>
+    <button>클릭</button>
+    <hr>
+    <input type="number" id="num">
+    <button id="numBtn">클릭</button>
+</body>
+</html>
