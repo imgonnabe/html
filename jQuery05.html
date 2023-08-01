@@ -37,11 +37,16 @@
     <script>
         $(function(){
             $(".writeDiv").hide();
+            $(".btn2").hide();
             $(".btn").click(function(){
                 $(".writeDiv").show("slow");
+                $(".btn1").hide();
+                $(".btn2").show();
             });
             $(".btn2").click(function(){
                 $(".writeDiv").hide("slow");
+                $(".btn1").show();
+                $(".btn2").hide();
             });
         });
     </script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#login").click(function(){
+                let checkID = true;
+                let checkPW = true;
+                let id = $("#id").val();
+                let pw = $("#pw").val();
+                // console.log(id);// 브라우저에서 f12
+                // console.log(id.length);
+                if (id.length < 4) {
+                    alert("아이디를 입력하세요.\n아이디는 4글자 이상입니다.");
+                    $("#id").focus();
+                    checkID = !checkID;
+                }
+                if (checkID && pw.length < 5) {
+                    alert("암호를 입력하세요.");
+                    $("#pw").focus();
+                    checkPW = !checkPW;
+                }
+                if (checkID && checkPW){
+                    let form = $("<form></form>");
+                    form.attr("method", "get");
+                    form.attr("action", "./join");
+                    // form.attr("name", "loginForm");
+
+                    form.append($("<input/>", {
+                        type: 'hidden', name: 'id', value: id
+                    }));
+                    form.append($("<input/>", {
+                        type: 'hidden', name: 'pw', value: pw
+                    }));
+
+                    form.appendTo("body");
+                    form.submit();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>로그인 검사</h1>
+    <input type="text" id="id"><br>
+    <input type="password" id="pw"><br>
+    <button id="login">로그인</button>
+</body>
+</html>
