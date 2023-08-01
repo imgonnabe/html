@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            // alert($("h1").text());
+            $("h1").append("<br>추가합니다.");
+            $('#addBtn').click(function(){
+                $("h1").append("<br>추가합니다.");
+            });
+            $(".btn2").click(function(){
+                let list = $("#list").find("li");
+                for (let i = 0; i < list.length; i++) {                   
+                    alert(list.eq(i).text());                    
+                }
+                list.eq(1).text("변경했습니다.");
+                list.eq(2).append("<li>???</li>");
+            });
+            $("li").click(function(){
+                $("li").css("color", "red");
+            });
+            $(".sound").click(function(){
+                let soundFile = new Audio("./티모.mp3");
+                soundFile.play();
+                // soundFile.currentTime = 0;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery넣고 실행</h1>
+    <button id="addBtn">추가하기</button>
+    <hr>
+    <ul id="list">
+        <li>하나</li>
+        <li>둘</li>
+        <li>셋</li>
+    </ul>
+    <button class="btn2">리스트 선택</button>
+    <button class="sound">티모</button>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-이미지 변경하기</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn5").click(function(){
+                $("img").attr("src", "./fishing.png");
+                // alert(src);
+            });
+        });
+    </script>
+</head>
+<body>
+    <img src="./home.png">
+    <button class="btn5">사진 바꾸기</button>
+</body>
+</html>
