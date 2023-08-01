@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .writeDiv{
+            width: 100%;
+            height: 500px;
+            background-color: black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #title{
+            width: 100%;
+            height: 30px;
+            border: 0;
+        }
+
+        #content{
+            width: 100%;
+            height: 400px;
+            margin: 10px 0px; 
+            border: 0px;
+        }
+
+        #wirteBtn{
+            width: 100%;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".writeDiv").hide();
+            $(".btn").click(function(){
+                $(".writeDiv").show("slow");
+            });
+            $(".btn2").click(function(){
+                $(".writeDiv").hide("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>show/hide</h1>
+    <p>여기에 글이 있습니다.</p>
+    <div class="writeDiv">
+        <input type="text" id="title">
+        <textarea id="content"></textarea>
+        <button id="writeBtn">글쓰기</button>
+    </div>
+    <button class="btn">글쓰기 보이기</button>
+    <button class="btn2">글쓰기 감추기</button>
+    <p>아래에도 글이 있습니다.</p>
+</body>
+</html>

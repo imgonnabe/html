@@ -3,12 +3,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>04-이미지 변경하기</title>
+    <style>
+        .t1{
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
     <script src="./jquery-3.7.0.min.js"></script>
     <script>
         $(function(){
+            $(".t2").hide();
             $(".btn5").click(function(){
                 $("img").attr("src", "./fishing.png");
                 // alert(src);
+            });
+            $(".btn6").click(function(){
+                let mLeft = $("img").css("marginLeft");
+                // alert(mLeft);
+                mLeft = mLeft.slice(0, -2);
+                mLeft = Number(mLeft);
+                $("img").css("marginLeft", mLeft + 20);
+            });
+            $(".t1").click(function(){
+                $(".t2").toggle("slow");
             });
         });
     </script>
@@ -16,5 +33,8 @@
 <body>
     <img src="./home.png">
     <button class="btn5">사진 바꾸기</button>
+    <button class="btn6">이동하기</button>
+    <p class="t1">t1입니다.</p>
+    <p class="t2">t2입니다.</p>
 </body>
 </html>
